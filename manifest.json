@@ -1,0 +1,37 @@
+{
+	// おまじない
+	"manifest_version": 2,
+	// 拡張機能の名前
+	"name": "いいね！チェンジャー",
+	// 拡張機能の名前
+	"version": "0.8",
+	// 拡張機能の詳細
+	"description": "Facebookのいいね！が好きな言葉に変わる",
+
+	// バックグラウンドで動くものを規定
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	// ブラウザアクション（ブラウザ上でクリックできるようなアイコンが現れる）
+	"browser_action": {
+		"default_icon": "./icon/12.jpg",
+		"default_title": "This is My First Extensions."
+ 	},
+
+	"options_page": "options.html",
+
+ 	// 開いているページに関する設定
+ 	"content_scripts": [{
+ 	  // この拡張機能が動くドメインを指定できる（twitterのところでしか動かない拡張機能を作るとか）
+      "matches": ["http://*/*", "https://*/*"],
+      // 開いてるページで読み込むjsを書く
+      "js": ["js/jquery.js"]
+      // その他CSSなども可能
+ 	}],
+  	"permissions": [
+		"tabs",
+	  	"http://*/",
+	    "https://*/"
+    ]
+}

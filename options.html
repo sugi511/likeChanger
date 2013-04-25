@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>いいね！チェンジャー</title>
+	<meta charset="utf-8">
+	<style>
+		body{font-size: 13px; text-align: center;}
+		div.wrapper{width: 400px; margin: 0 auto; text-align: left;}
+		h1{font-weight: normal; text-align: center;}
+		p.attention span{color: #f33;}
+		#input_area{text-align: center;}
+		#button{text-align: center;}
+		.button{
+		    display: inline-block;
+		    *display: inline;
+		    zoom: 1;
+		    padding: 6px 20px;
+		    margin: 10px 20px;
+		    cursor: pointer;
+		    border: 1px solid #bbb;
+		    overflow: visible;
+		    font: bold 13px arial, helvetica, sans-serif;
+		    text-decoration: none;
+		    white-space: nowrap;
+		    color: #555;
+		    background-color: #bbb;
+		    background-image: linear-gradient(top, rgba(255,255,255,1),
+		                                rgba(255,255,255,0)),
+		                                url(data:image/png;base64,iVBORw0KGg[...]QmCC);
+		    transition: background-color .2s ease-out;
+		    background-clip: padding-box; /* Fix bleeding */
+		    border-radius: 3px;
+		    box-shadow: 0 1px 0 rgba(0, 0, 0, .3),
+		                            0 2px 2px -1px rgba(0, 0, 0, .5),
+		                            0 1px 0 rgba(255, 255, 255, .3) inset;
+		    text-shadow: 0 1px 0 rgba(255,255,255, .9);
+		}
+		 
+		.button:hover{
+		    background-color: #999;
+		    color: #222;
+		}
+		 
+		.button:active{
+		    background: #e9e9e9;
+		    position: relative;
+		    top: 1px;
+		    text-shadow: none;
+		    box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+		    outline: none;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div id="header">
+		<h1>いいね！チェンジャー</h1>
+	</div>
+	<div id="input_area">
+		<input id="word" type="text">
+	</div>
+	<div id="button">
+		<div id="save" class="button">Save!</div><div id="reset" class="button">Reset!</div>		
+	</div>
+	<div class="message">
+		<p>この設定で保存するときはSaveボタンを押してください。</p>
+		<p class="attention">キーワードをリセットしたいときはResetボタンを押してからSaveボタンを押してください。<br /><span>Saveボタンを押すまでは、設定は保存されません。</span></p>
+	</div>
+</div> <!-- content wrapper -->
+
+<script src="options.js"></script>
+</body>
+</html>
